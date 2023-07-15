@@ -1,24 +1,30 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import { createRoot } from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import './index.css';
+import Header from './layout/Header';
+
 import Home from './pages/Home';
-import Logements from './pages/Logements';
+import Housing from './pages/Housing';
 import About from './pages/About';
+import ErrorPage from './pages/ErrorPage';
+
+import './assets/css/index.css';
 
 import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const container = document.getElementById('root');
+const root = createRoot(container);
 root.render(
   <React.StrictMode>
     <Router>
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Logements" element={<Logements />} />
-        <Route path="/About" element={<About />} />
+        <Route path="/housing" element={<Housing />} />
+        <Route path="/about" element={<About />} />
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
-      <Home />
     </Router>
   </React.StrictMode>,
 );
