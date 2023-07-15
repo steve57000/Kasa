@@ -1,0 +1,17 @@
+.ErrorPage {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.ErrorPage-title > h1 {
+    margin: 0;
+    font-size: 20vw;
+}
+
+.ErrorPage-text > p {
+    font-size: 3vw;
+}

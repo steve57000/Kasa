@@ -1,0 +1,26 @@
+.Header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Header-logo {
+    display: contents;
+}
+.Header-nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center
+}
+
+.Header-nav > a {
+    font-size: 24px;
+    padding-left: 30px;
+    color: #FF6060;
+    text-decoration: none;
+}
+
+.Header-nav > a:focus {
+    text-decoration: underline;
+}

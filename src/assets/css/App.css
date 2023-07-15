@@ -1,0 +1,7 @@
+@import url("Header.css");
+@import url("HomePage.css");
+@import url("ErrorPage.css");
+
+#root {
+  padding: 0 3vw;
+}
