@@ -1,14 +1,14 @@
-// import logo from '../../logo.svg'
-import '../../App.css'
-
+import '../../assets/css/App.css';
+import Banner from '../../assets/img/banner.jpg';
 function Home() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Coucou Steve</h1>
-      </header>
+    <div className="Home">
+      <div className="Home-banner">
+        <img src={Banner} alt="Banner" />
+        <h1>Chez vous, partout et ailleurs</h1>
+      </div>
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;
