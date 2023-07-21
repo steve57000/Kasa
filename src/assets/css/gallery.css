@@ -1,0 +1,56 @@
+.gallery {
+    width : 100%;
+    height : 100%;
+    position: relative;
+    max-width : 1240px;
+    max-height : 415px;
+    min-width: 335px;
+    min-height: 255px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 1.5vw;
+}
+.picture {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.picture img{
+    width: 100%;
+    height: 100%;
+    max-width: fit-content;
+}
+.buttons {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.buttons .prev,
+.buttons .next {
+    border: none;
+    background-color: rgba(255, 255, 255, 0.0);
+    border-radius: 0.5vw;
+}
+.buttons .prev:hover,
+.buttons .next:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.buttons .next {
+    transform: rotate(180deg);
+}
+
+.buttons .prev img,
+.buttons .next img {
+    width: 100%;
+    height: 100%;
+    max-width : 3vw;
+    max-height : 5vw;
+    min-width: 25px;
+    min-height: 25px;
+}
