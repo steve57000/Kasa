@@ -51,10 +51,32 @@ const Housing = () => {
   } = houseDetails;
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Page Logements</h1>
-      </header>
+    <div className="house">
+      {!hostData ? (
+        <h1>Chargement des données...</h1>
+      ) : (
+        <div className="body">
+          <Gallery pictures={pictures} />
+          <div className="content">
+            <div className="title">
+              <h2>{title}</h2>
+              <h3>{location}</h3>
+              <Tags tags={tags} />
+            </div>
+            <div className="infos">
+              <div className="owner">
+                <span className="host-name">{host.name}</span>
+                <img src={host.picture} alt={host.name} />
+              </div>
+              <Rating rating={rating} />
+            </div>
+          </div>
+          <div className="house-description">
+            <Collapse title="Description" content={description} />
+            <Collapse title="Équipements" content={equipments} />
+          </div>
+        </div>
+      )}
     </div>
   );
 };
