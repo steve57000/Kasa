@@ -39,7 +39,17 @@ const Housing = () => {
     );
   }
 
-function Logements() {
+  const {
+    title,
+    pictures,
+    description,
+    host,
+    rating,
+    location,
+    equipments,
+    tags,
+  } = houseDetails;
+
   return (
     <div className="App">
       <header className="App-header">
