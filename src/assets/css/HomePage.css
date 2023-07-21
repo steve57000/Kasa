@@ -1,22 +1,88 @@
-.Home-banner {
-    position: relative;
-    height: 223px;
-    overflow: hidden;
-    display: flex;
+.Home {
+
+}
+.Banner {
+    grid-area: Banner;
+    display: grid;
+    align-content: center;
     align-items: center;
+    max-height: 223px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
     border-radius: 25px;
+    margin-bottom: 56px;
 }
 
-.Home-banner img {
-    width: 1240px;
-    height: 827px;
-    /*filter: contrast(0.9);*/
+.Banner-img {
+    filter: contrast(0.9);
 }
 
-.Home-banner h1 {
+.Banner-content {
+    display: grid;
+    grid-template-areas:  "Banner-h1";
+    align-content: center;
+    justify-content: center;
     position: absolute;
     width: 100%;
-    font-size: calc(20px + 1.5vw);
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
     color: #fff;
-    text-align: center;
+}
+
+.Banner-content h1 {
+    grid-area: Banner-h1;
+    font-size: calc(20px + 1.8vw);
+}
+
+.SectionCard {
+    width: 100%;
+    max-width: 1240px;
+    height: auto;
+    border-radius: 25px;
+    background-color: #F6F6F6;
+    grid-area: SectionCard;
+    padding: 56px 50px;
+}
+
+.SectionCard ul {
+    width: 100%;
+    max-width: 1240px;
+    grid-area: SectionCard-ul;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* see notes below */
+    grid-gap: 3em 2em;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+    justify-items: center;
+}
+
+.SectionCard ul li {
+    max-width: 340px;
+    max-height: 340px;
+    min-width: 335px;
+    min-height: 255px;
+    width: calc(100px + 16.355vw);
+    height: calc(100px + 16.355vw);
+    background: linear-gradient(180deg, rgba(255,96,96,1)0%, rgba(0, 0, 0, 1) 160%);
+    border-radius: 10px;
+    list-style: none;
+}
+
+.SectionCard ul li a {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.SectionCard ul li a p{
+    inline-size: 255px;
+    word-break: break-word;
+    margin: 0;
 }

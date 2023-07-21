@@ -1,24 +1,32 @@
 .Header {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: space-between;
 }
 
 .Header-logo {
     display: contents;
+    grid-area: Header-logo;
+}
+.Header-logo svg {
+    margin-bottom: 56px;
 }
 .Header-nav {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center
+    grid-area: Header-nav;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 50px;
+    margin-bottom: 56px;
 }
 
-.Header-nav > a {
-    font-size: 24px;
-    padding-left: 30px;
+.Header-nav a {
+    /*font-size: 24px;*/
+    /*padding-left: 30px;*/
     color: #FF6060;
     text-decoration: none;
+    font-size: 1.5em;
 }
 
 .Header-nav > a:focus {
