@@ -9,8 +9,12 @@ function Header() {
         <Logo />
       </div>
       <nav className="Header-nav color-red">
-        <Link to="/">Accueil</Link>
-        <Link to="/about">À propos</Link>
+        <Link to="/">
+          <span>Accueil</span>
+        </Link>
+        <Link to="/about">
+          <span>À propos</span>
+        </Link>
       </nav>
     </div>
   );
