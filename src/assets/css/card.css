@@ -1,0 +1,69 @@
+.SectionCard {
+    width: 100%;
+    max-width: 1240px;
+    height: auto;
+    border-radius: 25px;
+    background-color: #F6F6F6;
+    grid-area: SectionCard;
+    padding: calc(1px + 1.4vw) calc(1px + 1.4vw);
+}
+
+@media (max-width: 819px) {
+    .SectionCard{
+        display: contents;
+    }
+}
+
+.SectionCard ul {
+    width: 100%;
+    max-width: 1240px;
+    grid-area: SectionCard-ul;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 350px)); /* see notes below */
+    grid-gap: 3em 3em;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+    justify-items: center;
+    justify-content: center;
+}
+
+.SectionCard ul li {
+    max-width: 340px;
+    max-height: 340px;
+    min-width: 280px;
+    min-height: 225px;
+    width: calc(100px + 16.355vw);
+    height: calc(100px + 16.355vw);
+    background: linear-gradient(
+            180deg,
+            rgba(255, 96, 96, 1) 0%,
+            rgba(0, 0, 0, 1) 160%
+    );
+    background-size: cover;
+    border-radius: 10px;
+    list-style: none;
+}
+
+.SectionCard ul li a {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: white;
+}
+
+.SectionCard ul li a p{
+    margin: 0;
+    font-size: 1rem;
+    text-shadow: 0 0 1px black;
+    background-color: rgba(255,96,96,.5);
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 3.5vw 0 1vw;
+    border-radius: 0 0 10px 10px;
+    text-shadow: -1px 1px 10px black;
+}
