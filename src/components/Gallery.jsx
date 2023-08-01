@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useTransition } from 'react';
 import leftArrow from '../assets/img/arrow_left.svg';
 
 const Gallery = ({ pictures }) => {
+  // const [isPPending, startTransition] = useTransition();
   const [current, setCurrent] = useState(0);
   const length = pictures.length;
 
@@ -14,25 +15,29 @@ const Gallery = ({ pictures }) => {
   };
 
   return (
-    <div className="gallery">
+    <div className="Gallery ">
       {pictures.map(
         (picture, index) =>
           index === current && (
-            <div className="picture" key={'gallery_' + index}>
+            <div className="Picture" key={'gallery_' + index}>
               <img src={picture} key={picture} alt="Logement" />
             </div>
           ),
       )}
       {length > 1 && (
-        <div className="buttons">
-          <button className="prev" onClick={prev}>
-            <img src={leftArrow} alt="prev button" />
+        <div className="Buttons">
+          <button className="Prev" onClick={prev}>
+            <img src={leftArrow} alt="" />
           </button>
-          <button className="next" onClick={next}>
-            <img src={leftArrow} alt="next button" />
+
+          <button className="Next" onClick={next}>
+            <img src={leftArrow} alt="" />
           </button>
         </div>
       )}
+      <span className="PictureCompteur">
+        {current + 1}/{length}
+      </span>
     </div>
   );
 };
