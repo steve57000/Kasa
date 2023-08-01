@@ -20,20 +20,26 @@ const Collapse = ({ title, content }) => {
         onClick={() =>
           isExpanded ? setIsExpanded(false) : setIsExpanded(true)
         }
+        onKeyDown={() =>
+          isExpanded ? setIsExpanded(false) : setIsExpanded(true)
+        }
       >
-        <span className="collapse-title">{title}</span>
+        <span className="CollapseTitle">{title}</span>
         <img
           src={chevronDown}
           className={isExpanded ? 'arrow arrow-expanded' : 'arrow'}
+          alt=""
         />
       </div>
       <div
         className={
-          isExpanded ? 'content collapse-expanded' : 'content collapse-hidden'
+          isExpanded ? 'Content CollapseExpanded' : 'Content CollapseHidden'
         }
       >
         {newContent.map((item) => (
-          <span key={item}>{item}</span>
+          <span key={item} style={{ backgroundColor: '#F6F6F6' }}>
+            {item}
+          </span>
         ))}
       </div>
     </div>
