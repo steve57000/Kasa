@@ -15,10 +15,13 @@ export default function Card({ title, id }) {
 }
 
 Card.propTypes = {
-  title: string.isRequired,
-  id: string,
+  title: string,
+  cover: string,
+  id: string.isRequired,
+  isCover: string,
 };
 
 Card.defaultProps = {
   title: 'Titre de la location',
+  cover: DefaultImg,
 };
