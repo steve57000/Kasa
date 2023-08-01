@@ -1,0 +1,113 @@
+.ContainerHousing {
+    padding-bottom: 18vh;
+}
+
+.Content {
+    display: flex;
+    justify-content: space-between;
+    margin: 24px 0;
+}
+
+.Title h2 {
+    font-size: 3vmin;
+    margin-top: 0;
+}
+
+.Title h3 {
+      font-size: 2vmin;
+      margin: 0 24px 24px 0 ;
+}
+
+.Infos {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Owner {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+.HostName {
+    width: 50%;
+    font-size: 2.3vmin;
+    text-align: right;
+    padding-right: 15px;
+    line-height: 157.6%;
+}
+.Owner img {
+    float: right;
+    border-radius: 50%;
+    width: 8vmin;
+    height: 8vmin;
+}
+
+.Rating {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+.Rating img {
+    width: 4vmin;
+    height: 4vmin;
+}
+
+.Tags {
+    font-size: 14px ;
+}
+
+.HouseDescription {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 3vw;
+}
+
+@media screen and (max-width: 720px) {
+    .Content {
+        display: flex;
+        flex-direction: column;
+    }
+    .HouseDescription {
+        flex-wrap: wrap;
+    }
+    .Tags {
+        font-size: 12px;
+    }
+    .Infos {
+        width: 100%;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-top: 20px;
+    }
+    .HostName {
+        font-size: calc(8px + 1vmin);
+    }
+    .Title h2 {
+        font-size: 18px;
+    }
+    .Title h3 {
+        font-size: 14px;
+    }
+    .Owner {
+        align-items: center;
+    }
+    .Owner img {
+        width: calc(15px + 8vmin);
+        height: calc(15px + 8vmin);
+    }
+    .Rating {
+        width: 10vw;
+    }
+}
+
+@media screen and(max-width: 420px){
+    .Tags {
+        font-size: 10px;
+    }
+}
