@@ -1,79 +1,72 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Navigate, useParams } from 'react-router-dom';
 import Collapse from '../../components/Collapse';
 import Gallery from '../../components/Gallery';
 import Rating from '../../components/Rating';
 import Tags from '../../components/Tags';
+import Loader from '../../components/Loader';
+import HousingService from '../../utils/hooks';
 
 const Housing = () => {
   const { id } = useParams();
-  const [houseDetails, setHouseDetails] = useState([]);
-  const [error, setError] = useState(null);
-  const [hostData, setHostData] = useState(null);
-
+  const [data, setData] = useState([]);
+  const [isLoading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
+  const [errorCall, setErrorCall] = useState(false);
+  // Call Datas API
   useEffect(() => {
-    const fetchIdData = () => {
-      fetch('../../data.json', {
-        headers: {
-          'Content-Type': 'application/json',
-          Accept: 'application/json',
-        },
+    let housing;
+
+    HousingService.getById(id)
+      .then((data) => {
+        housing = data;
       })
-        .then(function (response) {
-          // console.log(response);
-          return response.json();
-        })
-        .then(function (myJson) {
-          // console.log(myJson);
-          const houseDetails = myJson.find((object) => object.id === id);
-          setHouseDetails(houseDetails);
-          setHostData(houseDetails.host);
-        });
-    };
-    fetchIdData();
+      .catch(() => {
+        setError(true);
+      })
+      .finally(() => {
+        setLoading(false);
+        // if url have bad id or name redirect to 404
+        if (!housing) {
+          setErrorCall(true);
+        } else {
+          setData(housing);
+        }
+      });
   }, [id]);
 
-  if (error) {
-    return (
-      <span>Oups, il y a eu un problème ${JSON.stringify(error.message)}.</span>
-    );
+  if (errorCall) {
+    return <Navigate to="/404notFound" />;
   }
 
-  const {
-    title,
-    pictures,
-    description,
-    host,
-    rating,
-    location,
-    equipments,
-    tags,
-  } = houseDetails;
+  if (error) {
+    return <h2>Oups il y a eu un problème</h2>;
+  }
 
   return (
-    <div className="house">
-      {!hostData ? (
-        <h1>Chargement des données...</h1>
+    <div className="ContainerHousing">
+      {isLoading ? (
+        <Loader />
       ) : (
-        <div className="body">
-          <Gallery pictures={pictures} />
-          <div className="content">
-            <div className="title">
-              <h2>{title}</h2>
-              <h3>{location}</h3>
-              <Tags tags={tags} />
+        <div className="Body">
+          <Gallery pictures={data.pictures} />
+          <div className="Content">
+            <div className="Title">
+              <h2>{data.title}</h2>
+              <h3>{data.location}</h3>
+              <Tags tags={data.tags} />
             </div>
-            <div className="infos">
-              <div className="owner">
-                <span className="host-name">{host.name}</span>
-                <img src={host.picture} alt={host.name} />
+            <div className="Infos">
+              <div className="Owner">
+                <span className="HostName">{data.host.name}</span>
+                <img src={data.host.picture} alt={data.host.name} />
               </div>
-              <Rating rating={rating} />
+              <Rating rating={data.rating} />
             </div>
           </div>
-          <div className="house-description">
-            <Collapse title="Description" content={description} />
-            <Collapse title="Équipements" content={equipments} />
+          <div className="HouseDescription">
+            <Collapse title="Description" content={data.description} />
+            <Collapse title="Équipements" content={data.equipments} />
           </div>
         </div>
       )}
