@@ -1,14 +1,23 @@
 import { NavLink } from 'react-router-dom';
-import { number, string } from 'prop-types';
-export default function Card({ title, id }) {
+import React from 'react';
+import { string } from 'prop-types';
+import DefaultImg from '../assets/img/backgroundCover.svg';
+
+export default function Card({ title, cover, id }) {
   // state
+  const getStringCover = cover.substring(0, 29);
+  const defaultStringCover = '/static/media/backgroundCover';
 
   // comportements
+  const isCover =
+    getStringCover === defaultStringCover
+      ? 'TextNoBackground'
+      : 'TextBackground';
   // affichage (render)
   return (
-    <li>
-      <NavLink to={`/housing/${id}`}>
-        <p>{title}</p>
+    <li style={{ backgroundImage: `url(${cover})` }}>
+      <NavLink to={`/housing/${id}`} className="LinkHousing">
+        <p className={isCover}>{title}</p>
       </NavLink>
     </li>
   );
