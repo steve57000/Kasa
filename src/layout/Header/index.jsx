@@ -9,10 +9,10 @@ function Header() {
         <Logo />
       </div>
       <nav className="Header-nav color-red">
-        <Link to="/">
+        <Link to="/home" className="light">
           <span>Accueil</span>
         </Link>
-        <Link to="/about">
+        <Link to="/about" className="light">
           <span>À propos</span>
         </Link>
       </nav>
