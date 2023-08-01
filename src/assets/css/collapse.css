@@ -1,0 +1,62 @@
+.Collapse {
+    min-width: 320px;
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.Arrow {
+    transform: rotate(0deg);
+    transition: .3s;
+}
+
+.ArrowExpanded {
+    transform: rotate(180deg);
+}
+
+.CollapseHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    color: #FFF;
+    background: #FF6060;
+    border-radius: 10px;
+}
+
+.Content {
+    transition: .3s;
+    transform: translateY(0)
+}
+
+.CollapseExpanded {
+    background: #F6F6F6;
+    padding: 20px 10px 40px 15px;
+    transform: translateY(0);
+    flex-direction: column;
+    line-height: 25px;
+    margin: 0;
+    border-radius: 10px;
+
+}
+.CollapseExpanded p {
+    margin: 0;
+}
+
+.CollapseHidden {
+    display: none;
+    transform: translateY(-100%);
+}
+@media screen and (max-width: 742px) {
+
+    .CollapseHeader {
+        font-size: 13px;
+    }
+    .CollapseExpanded {
+        line-height: 17px;
+    }
+    .CollapseExpanded p,
+    .CollapseExpanded span {
+        font-size: 12px;
+    }
+}
