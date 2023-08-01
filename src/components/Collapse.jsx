@@ -9,9 +9,14 @@ const Collapse = ({ title, content }) => {
     : (newContent = content);
 
   return (
-    <div className="collapse">
+    <div
+      className="Collapse"
+      tabIndex="-1"
+      style={{ marginBottom: '3vh', maxWidth: '1000px' }}
+    >
       <div
-        className="collapse-header"
+        className="CollapseHeader"
+        tabIndex="0"
         onClick={() =>
           isExpanded ? setIsExpanded(false) : setIsExpanded(true)
         }
