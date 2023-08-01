@@ -1,57 +1,57 @@
 import '../../assets/css/App.css';
-import Banner from '../../assets/img/banner.jpg';
-import { useEffect, useState } from 'react';
+import Banner from '../../components/Banner';
+import BannerImg from '../../assets/img/banner.jpg';
+import React, { useEffect, useState } from 'react';
 import Card from '../../components/Card';
-
+import Loader from '../../components/Loader';
+import HousingService from '../../utils/hooks/index';
 function Home() {
   // State (état, données)
+  const [data, setData] = useState([]);
+  const [isLoading, setLoading] = useState(true);
   const [error, setError] = useState(false);
-  const [dataHousing, setDataHousing] = useState([]);
 
   // Comportement
   useEffect(() => {
-    function getData() {
-      fetch('data.json', {
-        headers: {
-          'Content-Type': 'application/json',
-          Accept: 'application/json',
-        },
+    HousingService.getAll()
+      .then((housing) => {
+        setData(housing);
       })
-        .then(function (response) {
-          // console.log(response);
-          return response.json();
-        })
-        .then(function (myJson) {
-          // console.log(myJson);
-          setDataHousing(myJson);
-        });
-    }
-    getData();
+      .catch(() => {
+        setError(true);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   }, []);
+
   if (error) {
-    setError(error);
-    return <span>Oups il y a eu un problème ${error.message}</span>;
+    return <h2 className="text-center">Oups il y a eu un problème</h2>;
   }
+
   // affichage (render)
   return (
     <div className="Home">
-      <div className="Banner">
-        <img src={Banner} alt="Banner" className="Banner-img" />
-        <div className="Banner-content">
-          <h1>Chez vous, partout et ailleurs</h1>
-        </div>
-      </div>
+      <Banner
+        imgUrl={BannerImg}
+        title={['Chez vous', 'partout et ailleurs']}
+      ></Banner>
 
       <div className="SectionCard">
-        <ul>
-          {dataHousing.map((card, index) => (
-            <Card
-              title={card.title}
-              key={`${card.title}-${index}`}
-              id={card.id}
-            ></Card>
-          ))}
-        </ul>
+        {isLoading ? (
+          <Loader />
+        ) : (
+          <ul>
+            {data.map((card, index) => (
+              <Card
+                title={card.title}
+                cover={card.cover}
+                key={`${card.title}-${index}`}
+                id={card.id}
+              ></Card>
+            ))}
+          </ul>
+        )}
       </div>
     </div>
   );
