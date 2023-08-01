@@ -3,11 +3,9 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 56px;
+    max-width: 1240px;
 }
 
-.Header-logo {
-
-}
 .Header-logo svg {
     width: 100%;
     max-width: 29vw;
@@ -17,7 +15,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-    /*grid-gap: 50px;*/
 }
 .Header-nav a:first-child {
     margin-right: calc(10px + 3vw);
