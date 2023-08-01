@@ -2,10 +2,19 @@
 @import url("HomePage.css");
 @import url("ErrorPage.css");
 @import url("gallery.css");
+@import url("card.css");
+@import url("housing.css");
+@import url("collapse.css");
+@import url("footer.css");
 
 #root {
-    max-width: 1240px;
     width: 100%;
+    max-width: 1240px;
+    height: 100%;
     color: #FF6060;
+    margin: 0 auto;
 }
 
+.Body {
+    padding-bottom: 18vh;
+}
