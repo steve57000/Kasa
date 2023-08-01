@@ -1,8 +1,8 @@
-.gallery {
+refactoring.Gallery {
     position: relative;
     max-width: 1240px;
     max-height: 415px;
-    min-width: 335px;
+    min-width: 320px;
     min-height: 255px;
     display: flex;
     flex-direction: row;
@@ -11,17 +11,25 @@
     overflow: hidden;
     border-radius: calc(5px + 1.5vw);
 }
-.picture {
+.Picture {
+    position: relative;
     width: 100%;
     height: 100%;
     display: flex;
 }
-.picture img{
+.PictureCompteur {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    font-size: calc(10px + 1vw);
+    color: #fff;
+}
+.Picture img{
     width: 100%;
     height: 100%;
     max-width: fit-content;
 }
-.buttons {
+.Buttons {
     position: absolute;
     width: 100%;
     display: flex;
@@ -29,25 +37,25 @@
     padding: 0 10px;
 }
 
-.prev,
-.next {
+.Prev,
+.Next {
     border: none;
     background-color: rgba(255, 255, 255, 0);
     border-radius: 1.5vw;
     padding: 1vw;
 }
 
-.prev:hover,
-.next:hover {
+.Prev:hover,
+.Next:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-.next {
+.Next {
     transform: rotate(180deg);
 }
 
-.prev img,
-.next img{
-    width: 4vw;
-    height: 5vw;
+.Prev img,
+.Next img{
+    width: calc(10px + 1.5vw);
+    height: calc(10px + 2.3vw);
 }
