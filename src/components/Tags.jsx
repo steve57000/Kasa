@@ -18,7 +18,6 @@ const TagContent = styled.div`
   background-color: ${colors.primary};
   color: ${colors.secondary};
   border-radius: 5px;
-  //margin-right: 10px;
   display: flex;
   padding: 10px;
   justify-content: center;
@@ -27,15 +26,17 @@ const TagContent = styled.div`
 `;
 const Tags = ({ tags }) => {
   return (
-    <TagContainer>
-      {tags.map((tag) => {
-        return (
-          <TagContent className="Tags" key={tag}>
-            {tag}{' '}
-          </TagContent>
-        );
-      })}
-    </TagContainer>
+    <>
+      <TagContainer>
+        {tags.map((tag) => {
+          return (
+            <TagContent className="Tags" key={tag}>
+              {tag}{' '}
+            </TagContent>
+          );
+        })}
+      </TagContainer>
+    </>
   );
 };
 

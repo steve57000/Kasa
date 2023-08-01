@@ -22,6 +22,7 @@ export default function CarouselPage({ cardInfo }) {
               src={cardInfo}
               className="CarouselImage"
               key={`caroussel-${cardInfo}`}
+              alt=""
             ></img>
           </div>
         </Slide>

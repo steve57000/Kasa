@@ -3,7 +3,7 @@ import { arrayOf, string } from 'prop-types';
 
 export default function Banner({ imgUrl, title }) {
   // state
-  const addTitle = title ? title : null;
+
   // comportements
 
   // affichage (render)

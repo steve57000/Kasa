@@ -1,5 +1,5 @@
 import '../assets/css/loader.css';
-export default function Loader({ title, id }) {
+export default function Loader() {
   // state
 
   // comportements

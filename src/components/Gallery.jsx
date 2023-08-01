@@ -1,8 +1,7 @@
-import React, { useState, useTransition } from 'react';
+import React, { useState } from 'react';
 import leftArrow from '../assets/img/arrow_left.svg';
 
 const Gallery = ({ pictures }) => {
-  // const [isPPending, startTransition] = useTransition();
   const [current, setCurrent] = useState(0);
   const length = pictures.length;
 
