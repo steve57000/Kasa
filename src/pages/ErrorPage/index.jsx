@@ -1,14 +1,16 @@
 import '../../assets/css/App.css';
-
+import { Link } from 'react-router-dom';
+import colors from '../../utils/style/colors';
 function ErrorPage() {
   return (
     <div className="ErrorPage">
-      <div className="ErrorPage-title">
-        <h1>404</h1>
-      </div>
-      <div className="ErrorPage-text">
-        <p>Oups! La page que vous demandez n'existe pas.</p>
-      </div>
+      <h1>404</h1>
+      <p className="ErrorPage-text">
+        Oups! La page que vous demandez n'existe pas.
+      </p>
+      <Link to="/home" style={{ color: colors.primary }}>
+        Retourner sur la page d'accueil
+      </Link>
     </div>
   );
 }
