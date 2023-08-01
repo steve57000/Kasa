@@ -1,12 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import colors from '../utils/style/colors';
-const TagContainer = styled.div`
-  font-size: 1vmin;
-  min-width: 320px;
-  display: flex;
-  gap: 10px;
-`;
 
 const TagContent = styled.div`
   min-width: 84px;
@@ -27,7 +21,7 @@ const TagContent = styled.div`
 const Tags = ({ tags }) => {
   return (
     <>
-      <TagContainer>
+      <div className="TagContainer">
         {tags.map((tag) => {
           return (
             <TagContent className="Tags" key={tag}>
@@ -35,7 +29,7 @@ const Tags = ({ tags }) => {
             </TagContent>
           );
         })}
-      </TagContainer>
+      </div>
     </>
   );
 };

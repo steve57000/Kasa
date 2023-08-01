@@ -1,11 +1,12 @@
 @import url("Header.css");
 @import url("HomePage.css");
 @import url("ErrorPage.css");
-@import url("gallery.css");
-@import url("card.css");
-@import url("housing.css");
-@import url("collapse.css");
-@import url("footer.css");
+@import url("Gallery.css");
+@import url("Card.css");
+@import url("Housing.css");
+@import url("Collapse.css");
+@import url("Footer.css");
+@import url("Tags.css");
 
 #root {
     width: 100%;
