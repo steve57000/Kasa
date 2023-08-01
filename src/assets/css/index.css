@@ -1,16 +1,15 @@
 body {
-  /*margin: 0 auto;*/
-  /*padding-top: 40px;*/
   font-family: -apple-system, BlinkMacSystemFont, 'Montserrat', 'Roboto', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  max-width: 1440px;
-  padding: 3vw;
-  margin: auto;
+  width: 100%;
   font-weight: 500;
   font-size: 100%;
   font-style: normal;
+  margin: 0 auto;
+  position: relative;
+  padding: 5vh 2vw 18vh;
 }
 
 code {
