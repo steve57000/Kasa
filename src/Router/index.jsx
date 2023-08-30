@@ -18,7 +18,7 @@ function RouterApp() {
           <Route path="https://steve57000.github.io/kasa" element={<Home />} />
           <Route path="/housing/:id" element={<Housing />} />
           <Route path="/about" element={<About />} />
-          <Route path="*" element={<Error404Redirect />} />
+          {/*<Route path="*" element={<Error404Redirect />} />*/}
           <Route path="/404notFound" element={<ErrorPage />} />
         </Routes>
         <Footer />
