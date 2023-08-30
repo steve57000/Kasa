@@ -4,10 +4,8 @@ import colors from '../utils/style/colors';
 
 const TagContent = styled.div`
   min-width: 84px;
-  max-width: 115px;
   min-height: 18px;
   max-height: 25px;
-  width: 100%;
   height: 100%;
   background-color: ${colors.primary};
   color: ${colors.secondary};
