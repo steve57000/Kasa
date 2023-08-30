@@ -1,5 +1,5 @@
 
-const urlHousingsAll: string =  "/data.json"
+const urlHousingsAll: string =  "./data.json"
 
 const getAll = async () => {
     let response
