@@ -6,6 +6,7 @@ import {
   ButtonNext,
 } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
+import { string } from 'prop-types';
 export default function CarouselPage({ cardInfo }) {
   let length = 0;
 
@@ -32,4 +33,6 @@ export default function CarouselPage({ cardInfo }) {
     </CarouselProvider>
   );
 }
-// CarouselPage.propTypes = {};
+CarouselPage.propTypes = {
+  cardInfo: string,
+};

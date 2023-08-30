@@ -15,7 +15,7 @@ function RouterApp() {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
-          <Route path="https://steve57000.github.io/kasa" element={<Home />} />
+          <Route path="https://steve57000.github.io/Kasa" element={<Home />} />
           <Route path="/housing/:id" element={<Housing />} />
           <Route path="/about" element={<About />} />
           <Route path="*" element={<Error404Redirect />} />
