@@ -12,7 +12,7 @@ import { Error404Redirect } from '../utils/notFoundUrl';
 function RouterApp() {
   return (
     <React.StrictMode>
-      <Router basename="/">
+      <Router>
         <Header />
         <Routes>
           <Route exact path="/" element={<Home />} />
