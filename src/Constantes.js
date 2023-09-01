@@ -1,5 +1,5 @@
 const production = {
-  url: 'https://steve57000.github.io/kasa/',
+  url: 'https://steve57000.github.io/kasa/home',
 };
 const development = {
   url: 'http://localhost:3000',
