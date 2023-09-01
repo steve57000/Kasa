@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
 import Header from '../layout/Header';
 import Footer from '../layout/Footer';
 import Home from '../pages/Home';
@@ -7,6 +8,7 @@ import Housing from '../pages/Housing';
 import About from '../pages/About';
 import ErrorPage from '../pages/ErrorPage';
 import { Error404Redirect } from '../utils/notFoundUrl';
+
 function RouterApp() {
   return (
     <React.StrictMode>
