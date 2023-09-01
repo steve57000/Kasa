@@ -8,17 +8,14 @@ import Housing from '../pages/Housing';
 import About from '../pages/About';
 import ErrorPage from '../pages/ErrorPage';
 import { Error404Redirect } from '../utils/notFoundUrl';
-import { config } from '../Constantes';
 
-const URL = config.url;
 function RouterApp() {
   return (
     <React.StrictMode>
       <Router>
         <Header />
-        <Routes basename={URL}>
+        <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route exact path="/kasa" element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/housing/:id" element={<Housing />} />
           <Route path="/about" element={<About />} />
