@@ -23,7 +23,7 @@ const getById = async (id) => {
     let data
 
     try {
-        response = await fetch(`${urlHousingsAll}/data.json`)
+        response = await fetch(`${urlHousingsAll}data.json`)
         allData = await response.json()
         data = allData.filter(housing => housing.id === id)[0]
 
