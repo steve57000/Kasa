@@ -18,7 +18,7 @@ function RouterApp() {
           <Route exact path="/" element={<Home />} />
           <Route
             exact
-            path="https://steve57000.github.io/home"
+            path="https://steve57000.github.io/kasa/"
             element={<Home />}
           />
           <Route path="/home" element={<Home />} />
