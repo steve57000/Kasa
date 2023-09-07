@@ -19,7 +19,7 @@ function RouterApp() {
           <Route path="/home" element={<Home />} />
           <Route path="/housing/:id" element={<Housing />} />
           <Route path="/about" element={<About />} />
-          <Route path="https://steve57000.github.io/kasa/" element={<Home />} />
+          <Route path="*" element={<Home />} />
           <Route path="/404notFound" element={<ErrorPage />} />
         </Routes>
         <Footer />
