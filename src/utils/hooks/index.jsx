@@ -1,4 +1,4 @@
-const urlHousingsAll : string = "./data.json"
+const urlHousingsAll : string = "../../data.json"
 console.log(urlHousingsAll)
 const getAll = async () => {
     let response
