@@ -1,12 +1,12 @@
 import { config } from "../../Constantes"
-const urlHousingsAll: string = config.url
+const urlHousingsAll: string = "./data.json"
 console.log(urlHousingsAll)
 const getAll = async () => {
     let response
     let data: Array
 
     try {
-        response = await fetch(`${urlHousingsAll}/data.json`)
+        response = await fetch(`${urlHousingsAll}`)
         data = await response.json()
 
     } catch (err) {
@@ -23,7 +23,7 @@ const getById = async (id) => {
     let data
 
     try {
-        response = await fetch(`${urlHousingsAll}/data.json`)
+        response = await fetch(`${urlHousingsAll}`)
         allData = await response.json()
         data = allData.filter(housing => housing.id === id)[0]
 
