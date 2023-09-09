@@ -18,7 +18,7 @@ function RouterApp() {
           <Route exact path="/kasa" element={<Home />} />
           <Route path="/kasa/housing/:id" element={<Housing />} />
           <Route path="/kasa/about" element={<About />} />
-          <Route path="/kasa/*" element={<Error404Redirect />} />
+          <Route path="*" element={<Error404Redirect />} />
           <Route path="/kasa/404notFound" element={<ErrorPage />} />
         </Routes>
         <Footer />
