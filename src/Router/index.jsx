@@ -15,8 +15,7 @@ function RouterApp() {
       <Router>
         <Header />
         <Routes>
-          {/*<Route exact path="/" element={<Home />} />*/}
-          <Route exact path="/kasa" element={<Home />} />
+          <Route exact path="/" element={<Home />} />
           <Route path="/housing/:id" element={<Housing />} />
           <Route path="/about" element={<About />} />
           <Route path="*" element={<Error404Redirect />} />
