@@ -15,7 +15,7 @@ function RouterApp() {
       <Router>
         <Header />
         <Routes>
-          <Route exact path="/kasa" element={<Home />} />
+          <Route exact path="/kasa/" element={<Home />} />
           <Route path="/kasa/housing/:id" element={<Housing />} />
           <Route path="/kasa/about" element={<About />} />
           <Route path="/kasa/*" element={<Error404Redirect />} />
