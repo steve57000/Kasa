@@ -24,7 +24,7 @@ function Header() {
           <span>Accueil</span>
         </Link>
         <Link
-          to="/about"
+          to="/kasa/about"
           className={splitLocation[1] === 'about' ? 'active' : ''}
         >
           <span>À propos</span>
