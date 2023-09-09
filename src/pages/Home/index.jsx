@@ -1,10 +1,12 @@
-import '../../assets/css/App.css';
-import Banner from '../../components/Banner';
+import '../../App.css';
+import Banner from '../../components/Banner/Banner';
 import BannerImg from '../../assets/img/banner.jpg';
 import React, { useEffect, useState } from 'react';
-import Card from '../../components/Card';
-import Loader from '../../components/Loader';
+import Card from '../../components/Card/Card';
+import Loader from '../../components/Loader/Loader';
 import HousingService from '../../utils/hooks/index';
+
+import './HomePage.css';
 function Home() {
   // State (état, données)
   const [data, setData] = useState([]);
@@ -34,7 +36,7 @@ function Home() {
     <div className="Home">
       <Banner
         imgUrl={BannerImg}
-        title={['Chez vous', 'partout et ailleurs']}
+        title={['Chez vous, ', 'partout et ailleurs']}
       ></Banner>
 
       <div className="SectionCard">

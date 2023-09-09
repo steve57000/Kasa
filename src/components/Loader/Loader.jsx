@@ -1,4 +1,4 @@
-import '../assets/css/Loader.css';
+import './Loader.css';
 export default function Loader() {
   // state
 

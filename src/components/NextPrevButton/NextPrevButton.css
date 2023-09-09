@@ -1,0 +1,21 @@
+.Prev,
+.Next {
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 1.5vw;
+    padding: 1vw;
+}
+
+.Prev:hover,
+.Next:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.Next {
+    transform: rotate(180deg);
+}
+.Prev img,
+.Next img{
+    width: calc(10px + 1.5vw);
+    height: calc(10px + 2.3vw);
+}

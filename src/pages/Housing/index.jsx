@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Navigate, useParams } from 'react-router-dom';
-import Collapse from '../../components/Collapse';
-import Gallery from '../../components/Gallery';
-import Rating from '../../components/Rating';
-import Tags from '../../components/Tags';
-import Loader from '../../components/Loader';
+import Collapse from '../../components/Collapse/Collapse';
+import Gallery from '../../components/Gallery/Gallery';
+import Rating from '../../components/Rating/Rating';
+import Tags from '../../components/Tags/Tags';
+import Loader from '../../components/Loader/Loader';
 import HousingService from '../../utils/hooks';
 
+import './Housing.css';
 const Housing = () => {
   const { id } = useParams();
   const [data, setData] = useState([]);

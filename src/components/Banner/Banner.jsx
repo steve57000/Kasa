@@ -1,5 +1,6 @@
 import React from 'react';
 import { arrayOf, string } from 'prop-types';
+import './Banner.css';
 
 export default function Banner({ imgUrl, title }) {
   // state

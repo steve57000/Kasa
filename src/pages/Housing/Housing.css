@@ -1,7 +1,6 @@
 .ContainerHousing {
-    padding-bottom: 18vh;
+    width: 100%;
 }
-
 .Content {
     display: flex;
     justify-content: space-between;
@@ -43,30 +42,69 @@
     width: 8vmin;
     height: 8vmin;
 }
-
-.Rating {
-    width: 100%;
-    margin-top: 20px;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-}
-.Rating img {
-    width: 4vmin;
-    height: 4vmin;
-}
-
-.Tags {
-    font-size: 14px ;
-}
-
 .HouseDescription {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
     gap: 3vw;
 }
+.Collapse {
+    min-width: 320px;
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+}
 
+.Arrow {
+    width: 32px;
+    height: 32px;
+}
+
+.CollapseHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    color: #FFF;
+    background: #FF6060;
+    border-radius: 10px;
+}
+
+.Content {
+    transition: .3s;
+    transform: translateY(0)
+}
+
+.CollapseExpanded {
+    background: #F6F6F6;
+    padding: 20px 10px 40px 15px;
+    transform: translateY(0);
+    flex-direction: column;
+    line-height: 25px;
+    margin: 0;
+    border-radius: 10px;
+}
+.CollapseExpanded p {
+    margin: 0;
+}
+
+.CollapseHidden {
+    display: none;
+    transform: translateY(-100%);
+}
+@media screen and (max-width: 742px) {
+
+    .CollapseHeader {
+        font-size: 13px;
+    }
+    .CollapseExpanded {
+        line-height: 17px;
+    }
+    .CollapseExpanded p,
+    .CollapseExpanded span {
+        font-size: 12px;
+    }
+}
 @media screen and (max-width: 720px) {
     .Content {
         display: flex;

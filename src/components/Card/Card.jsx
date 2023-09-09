@@ -1,8 +1,8 @@
 import { NavLink } from 'react-router-dom';
 import React from 'react';
 import { string } from 'prop-types';
-import DefaultImg from '../assets/img/backgroundCover.svg';
-
+import DefaultImg from '../../assets/img/backgroundCover.svg';
+import './Card.css';
 export default function Card({ title, cover, id }) {
   // state
   const getStringCover = cover.substring(0, 29);

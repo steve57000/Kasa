@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Header from '../layout/Header';
 import Footer from '../layout/Footer';
@@ -16,7 +16,7 @@ function RouterApp() {
         <Header />
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route path="/home" element={<Home />} />
+          <Route path="https://steve57000.github.io/kasa/" element={<Home />} />
           <Route path="/housing/:id" element={<Housing />} />
           <Route path="/about" element={<About />} />
           <Route path="*" element={<Error404Redirect />} />

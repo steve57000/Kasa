@@ -1,0 +1,11 @@
+.Rating {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+.Rating img {
+    width: 4vmin;
+    height: 4vmin;
+}

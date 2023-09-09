@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 56px;
-    max-width: 1240px;
+    width: 100%;
 }
 
 .Header-logo svg {
@@ -16,6 +16,7 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
 }
+
 .Header-nav a:first-child {
     margin-right: calc(10px + 3vw);
 }
@@ -27,6 +28,8 @@
     text-align: end;
 }
 
-.Header-nav > a:focus {
+.Header-nav a.active {
     text-decoration: underline;
 }
+
+

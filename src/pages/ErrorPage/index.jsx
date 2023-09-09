@@ -1,6 +1,7 @@
-import '../../assets/css/App.css';
+import '../../App.css';
 import { Link } from 'react-router-dom';
 import colors from '../../utils/style/colors';
+import './ErrorPage.css';
 function ErrorPage() {
   return (
     <div className="ErrorPage">
