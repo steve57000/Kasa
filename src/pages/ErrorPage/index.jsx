@@ -9,7 +9,7 @@ function ErrorPage() {
       <p className="ErrorPage-text">
         Oups! La page que vous demandez n'existe pas.
       </p>
-      <Link to="/" style={{ color: colors.primary }}>
+      <Link to="/kasa" style={{ color: colors.primary }}>
         Retourner sur la page d'accueil
       </Link>
     </div>
