@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import chevronDown from '../../assets/img/chevron.svg';
+import chevronDown from '../../assets/media/chevron.svg';
 
 const Collapse = ({ title, content }) => {
   const [isExpanded, setIsExpanded] = useState(false);

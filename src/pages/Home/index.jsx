@@ -1,6 +1,6 @@
 import '../../App.css';
 import Banner from '../../components/Banner/Banner';
-import BannerImg from '../../assets/img/banner.jpg';
+import BannerImg from '../../assets/media/banner.jpg';
 import React, { useEffect, useState } from 'react';
 import Card from '../../components/Card/Card';
 import Loader from '../../components/Loader/Loader';

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import leftArrow from '../../assets/img/arrow_left.svg';
+import leftArrow from '../../assets/media/arrow_left.svg';
 import './Gallery.css';
 
 const Gallery = ({ pictures }) => {

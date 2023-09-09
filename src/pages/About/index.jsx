@@ -1,4 +1,4 @@
-import BannerImg from '../../assets/img/bannerAbout.jpg';
+import BannerImg from '../../assets/media/bannerAbout.jpg';
 import Banner from '../../components/Banner/Banner';
 import React from 'react';
 import Collapse from '../../components/Collapse/Collapse';
