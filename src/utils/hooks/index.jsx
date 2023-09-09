@@ -6,7 +6,7 @@ const getAll = async () => {
     let data: Array
 
     try {
-        response = await fetch(`${urlHousingsAll}/data.json`)
+        response = await fetch(`${urlHousingsAll}data.json`)
         data = await response.json()
 
     } catch (err) {
