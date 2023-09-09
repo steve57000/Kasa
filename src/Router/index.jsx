@@ -16,10 +16,10 @@ function RouterApp() {
         <Header />
         <Routes>
           <Route exact path="/kasa" element={<Home />} />
-          <Route path="/housing/:id" element={<Housing />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/*" element={<Error404Redirect />} />
-          <Route path="/404notFound" element={<ErrorPage />} />
+          <Route path="/kasa/housing/:id" element={<Housing />} />
+          <Route path="/kasa/about" element={<About />} />
+          <Route path="/kasa/*" element={<Error404Redirect />} />
+          <Route path="/kasa/404notFound" element={<ErrorPage />} />
         </Routes>
         <Footer />
       </Router>
