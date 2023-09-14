@@ -33,11 +33,13 @@ function RouterApp() {
         <Routes>
           <Route path="/" element={<BasicLayout />}>
             <Route index element={<Home />} />
-            <Route path="/about" element={<About />} />
             <Route path="/housing/:id" element={<Housing />} />
-            <Route path="/404notFound" element={<ErrorPage />} />
-            <Route path="*" element={<Error404Redirect />} />
+            <Route path="/housing/404notFound" element={<ErrorPage />} />
           </Route>
+            <Route path="/about" element={<BasicLayout />} >
+                <Route index element={<About />} />
+            </Route>
+            <Route path="*" element={<Error404Redirect />} />
         </Routes>
       </Router>
     </React.StrictMode>

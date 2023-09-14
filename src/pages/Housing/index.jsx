@@ -37,7 +37,7 @@ const Housing = () => {
   }, [id]);
 
   if (errorCall) {
-    return <Navigate to="/404notFound" />;
+    return <Navigate to="/housing/404notFound" />;
   }
 
   if (error) {
