@@ -32,7 +32,7 @@ function RouterApp() {
     <React.StrictMode>
       <Router basename={`/`}>
         <Routes>
-          <Route path="" element={<BasicLayout />}>
+          <Route path="/" element={<BasicLayout />}>
             <Route index element={<Home />} />
             <Route path="/housing/:id" element={<Housing />} />
             <Route path="/housing/404notFound" element={<ErrorPage />} />
