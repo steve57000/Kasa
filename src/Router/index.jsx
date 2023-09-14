@@ -27,11 +27,12 @@ function BasicLayout() {
   );
 }
 function RouterApp() {
+    console.log("base url: " + urlBase)
   return (
     <React.StrictMode>
-      <Router base={`${urlBase}/`}>
+      <Router basename={`/`}>
         <Routes>
-          <Route path="/" element={<BasicLayout />}>
+          <Route path="" element={<BasicLayout />}>
             <Route index element={<Home />} />
             <Route path="/housing/:id" element={<Housing />} />
             <Route path="/housing/404notFound" element={<ErrorPage />} />
