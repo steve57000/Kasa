@@ -29,7 +29,7 @@ function RouterApp() {
     <React.StrictMode>
       <Router>
         <Routes basename={`${urlBase}`}>
-          <Route path="/" element={<BasicLayout />}>
+          <Route path="" element={<BasicLayout />}>
             <Route index element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/housing/:id" element={<Housing />} />
