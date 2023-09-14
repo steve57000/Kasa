@@ -14,16 +14,14 @@ function Header() {
   //Javascript split method to get the name of the path in array
   const splitLocation = pathname.split('/');
   console.log('la location' + splitLocation[1]);
+  console.log('le pathname' + pathname);
   return (
     <div className="Header">
       <div className="Header-logo">
         <Logo />
       </div>
       <nav className="Header-nav color-red">
-        <Link
-          to="/"
-          className={splitLocation[1] === '' || 'kasa' ? 'active' : ''}
-        >
+        <Link to="/" className={splitLocation[1] === '' ? 'active' : ''}>
           <span>Accueil</span>
         </Link>
         <Link
