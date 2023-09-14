@@ -25,7 +25,7 @@ function BasicLayout() {
 }
 function RouterApp() {
   return (
-    <React.Fragment>
+    <React.StrictMode>
       <Router>
         <Routes>
           <Route path="/" element={<BasicLayout />}>
@@ -37,7 +37,7 @@ function RouterApp() {
           </Route>
         </Routes>
       </Router>
-    </React.Fragment>
+    </React.StrictMode>
   );
 }
 
