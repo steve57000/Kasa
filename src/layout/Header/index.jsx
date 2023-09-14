@@ -13,7 +13,7 @@ function Header() {
 
   //Javascript split method to get the name of the path in array
   const splitLocation = pathname.split('/');
-  console.log(splitLocation[1]);
+  console.log('la location' + splitLocation[1]);
   return (
     <div className="Header">
       <div className="Header-logo">
