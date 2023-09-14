@@ -28,7 +28,7 @@ function RouterApp() {
   return (
     <React.StrictMode>
       <Router>
-        <Routes basename={`${urlBase}`}>
+        <Routes basename={`${urlBase}/kasa`}>
           <Route path="" element={<BasicLayout />}>
             <Route index element={<Home />} />
             <Route path="/about" element={<About />} />
