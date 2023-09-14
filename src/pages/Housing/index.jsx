@@ -37,7 +37,7 @@ const Housing = () => {
   }, [id]);
 
   if (errorCall) {
-    return <Navigate to="/kasa/404notFound" />;
+    return <Navigate to="/404notFound" />;
   }
 
   if (error) {
