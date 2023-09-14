@@ -22,7 +22,7 @@ function Header() {
       <nav className="Header-nav color-red">
         <Link
           to="/"
-          className={splitLocation[1] === ('' || 'kasa') ? 'active' : ''}
+          className={splitLocation[1] === '' || 'kasa' ? 'active' : ''}
         >
           <span>Accueil</span>
         </Link>
