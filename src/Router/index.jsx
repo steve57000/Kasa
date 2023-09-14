@@ -1,5 +1,10 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Outlet,
+} from 'react-router-dom';
 
 import Header from '../layout/Header';
 import Footer from '../layout/Footer';
@@ -9,21 +14,30 @@ import About from '../pages/About';
 import ErrorPage from '../pages/ErrorPage';
 import { Error404Redirect } from '../utils/notFoundUrl';
 
+function BasicLayout() {
+  return (
+    <>
+      <Header />
+      <Outlet />
+      <Footer />
+    </>
+  );
+}
 function RouterApp() {
   return (
-    <React.StrictMode>
+    <React.Fragment>
       <Router>
-        <Header />
         <Routes>
-          <Route exact path="/kasa/" element={<Home />} />
-          <Route path="/kasa/housing/:id" element={<Housing />} />
-          <Route path="/kasa/about" element={<About />} />
-          <Route path="/kasa/*" element={<Error404Redirect />} />
-          <Route path="/kasa/404notFound" element={<ErrorPage />} />
+          <Route path="/" element={<BasicLayout />}>
+            <Route index element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/housing/:id" element={<Housing />} />
+            <Route path="/404notFound" element={<ErrorPage />} />
+            <Route path="*" element={<Error404Redirect />} />
+          </Route>
         </Routes>
-        <Footer />
       </Router>
-    </React.StrictMode>
+    </React.Fragment>
   );
 }
 

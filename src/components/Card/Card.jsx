@@ -16,7 +16,7 @@ export default function Card({ title, cover, id }) {
   // affichage (render)
   return (
     <li style={{ backgroundImage: `url(${cover})` }}>
-      <NavLink to={`/kasa/housing/${id}`} className="LinkHousing">
+      <NavLink to={`/housing/${id}`} className="LinkHousing">
         <p className={isCover}>{title}</p>
       </NavLink>
     </li>

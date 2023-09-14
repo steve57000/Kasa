@@ -1,6 +1,5 @@
 import { config } from "../../Constantes"
 const urlHousingsAll: string = config.url
-console.log(urlHousingsAll)
 const getAll = async () => {
     let response
     let data: Array

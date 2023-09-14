@@ -33,19 +33,19 @@ const contentCollapse = [
 function About() {
   return (
     <>
-      <Banner imgUrl={BannerImg}> </Banner>
-      <div style={{
+        <Banner imgUrl={BannerImg}> </Banner>
+        <div style={{
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
             width: '100%'
         }}
-      >
-        { contentCollapse.map((content : {id: string, description: string, title: string}) => (
-          <Collapse title={content.title} content={content.description} key={`${content.id}-${content.title}`} />
-        ))
-        }
-      </div>
+        >
+            { contentCollapse.map((content : {id: string, description: string, title: string}) => (
+                <Collapse title={content.title} content={content.description} key={`${content.id}-${content.title}`} />
+            ))
+            }
+        </div>
     </>
   );
 }
