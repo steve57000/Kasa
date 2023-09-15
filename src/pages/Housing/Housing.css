@@ -92,8 +92,12 @@
     display: none;
     transform: translateY(-100%);
 }
-@media screen and (max-width: 742px) {
 
+@media screen and (max-width: 780px) {
+    .Content {
+        display: flex;
+        flex-direction: column;
+    }
     .CollapseHeader {
         font-size: 13px;
     }
@@ -104,17 +108,16 @@
     .CollapseExpanded span {
         font-size: 12px;
     }
-}
-@media screen and (max-width: 720px) {
-    .Content {
-        display: flex;
-        flex-direction: column;
+    .CollapseHidden {
+        display: none;
     }
     .HouseDescription {
         flex-wrap: wrap;
     }
     .Tags {
         font-size: 12px;
+        padding-top: 5px;
+        padding-bottom: 5px;
     }
     .Infos {
         width: 100%;
