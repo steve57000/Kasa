@@ -12,7 +12,6 @@ function Home() {
   const [data, setData] = useState([]);
   const [isLoading, setLoading] = useState(true);
   const [error, setError] = useState(false);
-
   // Comportement
   useEffect(() => {
     HousingService.getAll()

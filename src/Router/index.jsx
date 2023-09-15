@@ -4,6 +4,7 @@ import {
   Routes,
   Route,
   Outlet,
+  Navigate,
 } from 'react-router-dom';
 
 import Header from '../layout/Header';
@@ -12,7 +13,6 @@ import Home from '../pages/Home';
 import Housing from '../pages/Housing';
 import About from '../pages/About';
 import ErrorPage from '../pages/ErrorPage';
-import { Error404Redirect } from '../utils/notFoundUrl';
 
 function BasicLayout() {
   return (
@@ -34,8 +34,11 @@ function RouterApp() {
             <Route path="/404notFound" element={<ErrorPage />} />
             <Route path="/housing/:id" element={<Housing />} />
             <Route path="/housing/404notFound" element={<ErrorPage />} />
+            <Route
+              path="*"
+              element={<Navigate to="/404notFound" replace={true} />}
+            />
           </Route>
-          <Route path="*" element={<Error404Redirect />} />
         </Routes>
       </Router>
     </React.StrictMode>
