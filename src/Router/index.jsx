@@ -36,7 +36,7 @@ function RouterApp() {
             <Route
               path="*"
               element={<Navigate to="404notFound" replace={true} />}
-            ></Route>
+            />
           </Route>
         </Routes>
       </Router>
