@@ -14,9 +14,6 @@ import About from '../pages/About';
 import ErrorPage from '../pages/ErrorPage';
 import { Error404Redirect } from '../utils/notFoundUrl';
 
-import { config } from "../Constantes"
-
-const urlBase: string = config.url
 function BasicLayout() {
   return (
     <>
@@ -27,20 +24,18 @@ function BasicLayout() {
   );
 }
 function RouterApp() {
-    console.log("base url: " + urlBase)
   return (
     <React.StrictMode>
-      <Router basename="/">
+      <Router basename="/kasa">
         <Routes>
           <Route path="" element={<BasicLayout />}>
             <Route index element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/404notFound" element={<ErrorPage />} />
             <Route path="/housing/:id" element={<Housing />} />
             <Route path="/housing/404notFound" element={<ErrorPage />} />
           </Route>
-            <Route path="/about" element={<BasicLayout />} >
-                <Route index element={<About />} />
-            </Route>
-            <Route path="*" element={<Error404Redirect />} />
+          <Route path="*" element={<Error404Redirect />} />
         </Routes>
       </Router>
     </React.StrictMode>
