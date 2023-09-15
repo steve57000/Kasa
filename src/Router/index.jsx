@@ -26,9 +26,9 @@ function BasicLayout() {
 function RouterApp() {
   return (
     <React.StrictMode>
-      <Router basename="/kasa/">
+      <Router basename="kasa">
         <Routes>
-          <Route exact path="" element={<BasicLayout />}>
+          <Route path="/" element={<BasicLayout />}>
             <Route index element={<Home />} />
             <Route path="about" element={<About />} />
             <Route path="404notFound" element={<ErrorPage />} />
@@ -38,6 +38,7 @@ function RouterApp() {
               element={<Navigate to="404notFound" replace={true} />}
             />
           </Route>
+          <Route path="*" element={<ErrorPage />} />
         </Routes>
       </Router>
     </React.StrictMode>
