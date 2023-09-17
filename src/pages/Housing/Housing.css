@@ -87,7 +87,7 @@
 @keyframes myAnim {
     0% {
         transform: translateY(-100px);
-        opacity: 1;
+        opacity: 0;
     }
 
     100% {
