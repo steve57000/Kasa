@@ -1,7 +1,7 @@
 .Gallery {
     position: relative;
     max-width: 1240px;
-    max-height: 415px;
+    max-height: 80vh;
     min-width: 320px;
     min-height: 255px;
     height: 100%;
@@ -24,6 +24,28 @@
     min-width: 320px;
     min-height: 255px;
     width: 100%;
+}
+@keyframes nextImg{
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes prevImg{
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
 }
 @media (max-width: 720px){
     .Picture {

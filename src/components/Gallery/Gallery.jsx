@@ -4,14 +4,21 @@ import './Gallery.css';
 
 const Gallery = ({ pictures }) => {
   const [current, setCurrent] = useState(0);
+  const [animName, setAnimName] = useState('');
   const length = pictures.length;
+
+  let styleAnimation = {
+    animation: `${animName} .5s ease-in 0s 1`,
+  };
 
   const next = () => {
     setCurrent(current === length - 1 ? 0 : current + 1);
+    setAnimName('nextImg');
   };
 
   const prev = () => {
     setCurrent(current === 0 ? length - 1 : current - 1);
+    setAnimName('prevImg');
   };
 
   return (
@@ -20,7 +27,12 @@ const Gallery = ({ pictures }) => {
         (picture, index) =>
           index === current && (
             <div className="Picture" key={'gallery_' + index}>
-              <img src={picture} key={picture} alt="Logement" />
+              <img
+                src={picture}
+                key={picture}
+                alt="Logement"
+                style={styleAnimation}
+              />
             </div>
           ),
       )}

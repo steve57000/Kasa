@@ -1,7 +1,10 @@
-import BannerImg from '../../assets/media/bannerAbout.jpg';
-import Banner from '../../components/Banner/Banner';
 import React from 'react';
+
+import Banner from '../../components/Banner/Banner';
 import Collapse from '../../components/Collapse/Collapse';
+
+import BannerImg from '../../assets/media/bannerAbout.jpg';
+import './about.css'
 
 const contentCollapse = [
   {
@@ -34,12 +37,7 @@ function About() {
   return (
     <>
         <Banner imgUrl={BannerImg}> </Banner>
-        <div style={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            width: '100%'
-        }}
+        <div className='CollapseAbout'
         >
             { contentCollapse.map((content : {id: string, description: string, title: string}) => (
                 <Collapse title={content.title} content={content.description} key={`${content.id}-${content.title}`} />

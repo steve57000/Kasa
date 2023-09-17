@@ -70,19 +70,32 @@
 }
 
 .Content {
-    transition: .3s;
-    transform: translateY(0)
+    transition: all .3s;
 }
 
 .CollapseExpanded {
+    position: relative;
     background: #F6F6F6;
     padding: 20px 10px 40px 15px;
-    transform: translateY(0);
     flex-direction: column;
     line-height: 25px;
     margin: 0;
     border-radius: 10px;
+    animation: myAnim .5s ease 0s ;
+    z-index: -100;
 }
+@keyframes myAnim {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
 .CollapseExpanded p {
     margin: 0;
 }

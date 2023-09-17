@@ -47,9 +47,6 @@ const Collapse = ({ title, content }) => {
           className={
             isExpanded ? 'Content CollapseExpanded' : 'Content CollapseHidden'
           }
-          style={
-            isExpanded ? { transition: 'all .3s' } : { transition: 'all .3s' }
-          }
         >
           {newContent.map((item, index) => (
             <span
