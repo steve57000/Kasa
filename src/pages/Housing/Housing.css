@@ -81,13 +81,13 @@
     line-height: 25px;
     margin: 0;
     border-radius: 10px;
-    animation: myAnim .5s ease 0s ;
+    animation: myAnim .3s ease 0s ;
     z-index: -100;
 }
 @keyframes myAnim {
     0% {
-        transform: translateY(-50px);
-        opacity: 0;
+        transform: translateY(-100px);
+        opacity: 1;
     }
 
     100% {

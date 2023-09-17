@@ -34,8 +34,8 @@ const Collapse = ({ title, content }) => {
           className={isExpanded ? 'Arrow Arrow-expanded' : 'Arrow'}
           style={
             isExpanded
-              ? { transition: 'all .3s', transform: 'rotate(-180deg)' }
-              : { transition: 'all .3s' }
+              ? { transition: 'all .4s', transform: 'rotate(-180deg)' }
+              : { transition: 'all .4s' }
           }
           alt={collapseALtName}
         />

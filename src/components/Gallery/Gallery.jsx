@@ -8,7 +8,7 @@ const Gallery = ({ pictures }) => {
   const length = pictures.length;
 
   let styleAnimation = {
-    animation: `${animName} .5s ease-in 0s 1`,
+    animation: `${animName} .3s ease-in 0s 1`,
   };
 
   const next = () => {
