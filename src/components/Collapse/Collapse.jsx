@@ -3,6 +3,7 @@ import chevronDown from '../../assets/media/chevron.svg';
 
 const Collapse = ({ title, content }) => {
   const [isExpanded, setIsExpanded] = useState(false);
+  const collapseALtName = isExpanded ? 'replier' : 'développer';
   let newContent;
   typeof content === 'string'
     ? (newContent = [content])
@@ -36,20 +37,31 @@ const Collapse = ({ title, content }) => {
               ? { transition: 'all .3s', transform: 'rotate(-180deg)' }
               : { transition: 'all .3s' }
           }
-          alt=""
+          alt={collapseALtName}
         />
       </div>
-      <div
-        className={
-          isExpanded ? 'Content CollapseExpanded' : 'Content CollapseHidden'
-        }
-      >
-        {newContent.map((item) => (
-          <span key={item} style={{ backgroundColor: '#F6F6F6' }}>
-            {item}
-          </span>
-        ))}
-      </div>
+
+      {/* On génère l'élément dans le DOM seulement si le Collapse est déplié */}
+      {!isExpanded ? null : (
+        <div
+          className={
+            isExpanded ? 'Content CollapseExpanded' : 'Content CollapseHidden'
+          }
+          style={
+            isExpanded ? { transition: 'all .3s' } : { transition: 'all .3s' }
+          }
+        >
+          {newContent.map((item, index) => (
+            <span
+              tabIndex="0"
+              key={`${item}-${index}`}
+              style={{ backgroundColor: '#F6F6F6' }}
+            >
+              {item}
+            </span>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

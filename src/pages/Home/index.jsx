@@ -1,10 +1,12 @@
-import '../../App.css';
-import Banner from '../../components/Banner/Banner';
-import BannerImg from '../../assets/media/banner.jpg';
 import React, { useEffect, useState } from 'react';
-import Card from '../../components/Card/Card';
-import Loader from '../../components/Loader/Loader';
+
 import HousingService from '../../utils/hooks/index';
+
+import BannerImg from '../../assets/media/banner.jpg';
+
+import Card from '../../components/Card/Card';
+import Banner from '../../components/Banner/Banner';
+import Loader from '../../components/Loader/Loader';
 
 import './HomePage.css';
 function Home() {

@@ -55,11 +55,6 @@
     overflow: hidden;
 }
 
-.Arrow {
-    width: 32px;
-    height: 32px;
-}
-
 .CollapseHeader {
     display: flex;
     justify-content: space-between;
@@ -68,6 +63,10 @@
     color: #FFF;
     background: #FF6060;
     border-radius: 10px;
+}
+.Arrow {
+    width: 32px;
+    height: 32px;
 }
 
 .Content {
@@ -92,7 +91,9 @@
     display: none;
     transform: translateY(-100%);
 }
-
+.CollapseHeader-expanded {
+    display: block;
+}
 @media screen and (max-width: 780px) {
     .Content {
         display: flex;
