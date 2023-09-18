@@ -10,10 +10,25 @@ function Footer() {
         justifyContent: 'center',
       }}
     >
-      <div className="FooterContent">
+      <div
+        className="FooterContent"
+        style={{ maxWidth: '50vw', paddingTop: 'calc(5px + 2vh)' }}
+      >
         {/* Logo is an actual React component */}
         <Logo className="FooterLogo" />
-        <p>© 2020 Kasa. All rights reserved</p>
+        <p
+          style={{
+            textAlign: 'center',
+            fontWeight: '500',
+            fontSize: 'calc(8px + .6vw)',
+            marginTop: 'calc(5px + 3vh)',
+            marginBottom: '0',
+            width: 'calc(100px + 15vw)',
+            textWrap: 'balance',
+          }}
+        >
+          © 2020 Kasa. All rights reserved
+        </p>
       </div>
     </div>
   );
