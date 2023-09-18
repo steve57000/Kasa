@@ -1,9 +1,7 @@
 .TagContainer {
-    font-size: 1vmin;
-    min-width: 320px;
+    width: 100%;
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
-}
-.Tags {
-    font-size: 14px ;
+    font-size: 1vmin;
 }

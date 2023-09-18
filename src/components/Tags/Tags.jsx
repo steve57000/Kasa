@@ -8,11 +8,12 @@ const TagContent = styled.div`
   min-height: 18px;
   max-height: 25px;
   height: 100%;
+  font-size: 12px;
   background-color: ${colors.primary};
   color: ${colors.secondary};
   border-radius: 10px;
   display: flex;
-  padding: 10px;
+  padding: 15px;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
@@ -22,11 +23,7 @@ const Tags = ({ tags }) => {
     <>
       <div className="TagContainer">
         {tags.map((tag, index) => {
-          return (
-            <TagContent className="Tags" key={`${tag}-${index}`}>
-              {tag}
-            </TagContent>
-          );
+          return <TagContent key={`${tag}-${index}`}>{tag}</TagContent>;
         })}
       </div>
     </>
