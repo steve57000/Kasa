@@ -13,7 +13,7 @@ const TagContent = styled.div`
   color: ${colors.secondary};
   border-radius: 10px;
   display: flex;
-  padding: 15px;
+  padding: 14px;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
