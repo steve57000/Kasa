@@ -18,7 +18,7 @@
     max-width: 1240px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 2vw 0;
+    grid-gap: 4vh 1vw;
     margin-block-start: 0;
     margin-block-end: 0;
     padding-inline-start: 0;
@@ -63,10 +63,10 @@
     text-shadow: -1px 1px 10px black;
 }
 
-@media (max-width: 980px){
+@media (max-width: 1000px){
     .SectionCard ul {
         grid-template-columns: 1fr 1fr;
-        grid-gap: 2vw 2vw;
+        grid-gap: 2vw 3vh;
     }
     .SectionCard ul li {
         max-width: 340px;
@@ -80,6 +80,7 @@
 @media (max-width: 620px) {
     .SectionCard ul {
         grid-template-columns: 1fr;
+        grid-gap: 2vh
     }
     .SectionCard ul li {
         max-width: 340px;
