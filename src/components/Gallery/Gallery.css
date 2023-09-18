@@ -1,10 +1,10 @@
 .Gallery {
     position: relative;
     max-width: 1240px;
-    max-height: 80vh;
+    max-height: 415px;
     min-width: 320px;
     min-height: 255px;
-    height: 100%;
+    height: calc(200px + 16.355vw);
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -12,18 +12,13 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    border-radius: calc(5px + 1.5vw);
-    background-color: #FF6060;
+    border-radius: calc(8px + 1vh);
 }
 
 .Picture {
-    display: flex;
-    justify-content: center;
-    max-width: 1240px;
-    height: 415px;
-    min-width: 320px;
-    min-height: 255px;
     width: 100%;
+    height: 100%;
+    min-height: 100%;
 }
 @keyframes nextImg{
     0% {
@@ -62,7 +57,9 @@
 .Picture img{
     width: 100%;
     height: 100%;
-    max-width: fit-content;
+    min-height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 .Buttons {
     position: absolute;
@@ -81,7 +78,7 @@
 
 .Prev:hover,
 .Next:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 .Next {

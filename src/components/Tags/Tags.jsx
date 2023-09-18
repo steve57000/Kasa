@@ -4,13 +4,13 @@ import colors from '../../utils/style/colors';
 import './Tags.css';
 
 const TagContent = styled.div`
-  min-width: 84px;
+  min-width: 115px;
   min-height: 18px;
   max-height: 25px;
   height: 100%;
   background-color: ${colors.primary};
   color: ${colors.secondary};
-  border-radius: 5px;
+  border-radius: 10px;
   display: flex;
   padding: 10px;
   justify-content: center;
@@ -21,10 +21,10 @@ const Tags = ({ tags }) => {
   return (
     <>
       <div className="TagContainer">
-        {tags.map((tag) => {
+        {tags.map((tag, index) => {
           return (
-            <TagContent className="Tags" key={tag}>
-              {tag}{' '}
+            <TagContent className="Tags" key={`${tag}-${index}`}>
+              {tag}
             </TagContent>
           );
         })}
