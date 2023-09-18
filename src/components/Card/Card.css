@@ -63,7 +63,7 @@
     text-shadow: -1px 1px 10px black;
 }
 
-@media (max-width: 980px){
+@media (max-width: 990px){
     .SectionCard ul {
         grid-template-columns: 1fr 1fr;
         grid-gap: 2vw 2vw;
