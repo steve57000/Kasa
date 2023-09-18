@@ -43,11 +43,7 @@ const Collapse = ({ title, content }) => {
 
       {/* On génère l'élément dans le DOM seulement si le Collapse est déplié */}
       {!isExpanded ? null : (
-        <div
-          className={
-            isExpanded ? 'Content CollapseExpanded' : 'Content CollapseHidden'
-          }
-        >
+        <div className="CollapseExpanded">
           {newContent.map((item, index) => (
             <span
               tabIndex="0"

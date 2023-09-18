@@ -81,7 +81,8 @@
     line-height: 25px;
     margin: 0;
     border-radius: 10px;
-    animation: myAnim .3s ease 0s ;
+    transition: all .3s;
+    animation: myAnim .3s ease ;
     z-index: -100;
 }
 @keyframes myAnim {
@@ -100,10 +101,6 @@
     margin: 0;
 }
 
-.CollapseHidden {
-    display: none;
-    transform: translateY(-100%);
-}
 .CollapseHeader-expanded {
     display: block;
 }
