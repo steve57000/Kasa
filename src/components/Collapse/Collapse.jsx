@@ -44,12 +44,9 @@ const Collapse = ({ title, content }) => {
 
       {/* On génère l'élément dans le DOM seulement si le Collapse est déplié */}
       {!isExpanded ? null : (
-        <ul className="CollapseExpanded" style={{ transition: 'all 3s' }}>
+        <ul className="CollapseExpanded" style={{ backgroundColor: '#F6F6F6' }}>
           {newContent.map((item, index) => (
-            <li
-              key={`${item}-${index}`}
-              style={{ backgroundColor: '#F6F6F6', listStyle: 'none' }}
-            >
+            <li key={`${item}-${index}`} style={{ listStyle: 'none' }}>
               {item}
             </li>
           ))}
