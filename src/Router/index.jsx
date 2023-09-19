@@ -31,7 +31,7 @@ function RouterApp() {
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="404notFound" element={<ErrorPage />} />
-          <Route exact path="housing/:id" element={<Housing />} />
+          <Route path="housing/:id" element={<Housing />} />
           <Route
             path="*"
             element={<Navigate to="404notFound" replace={true} />}
