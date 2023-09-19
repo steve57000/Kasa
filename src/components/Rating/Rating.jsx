@@ -9,7 +9,7 @@ const Rating = ({ rating }) => {
       stars.push(
         <img
           src={fullStar}
-          alt="full-star"
+          alt=""
           style={{ width: '32', height: '32' }}
           key={i}
         />,

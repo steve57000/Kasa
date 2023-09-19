@@ -77,8 +77,6 @@
     position: relative;
     background: #F6F6F6;
     padding: 20px 10px 40px 15px;
-    display: flex;
-    flex-direction: column;
     line-height: 25px;
     margin: 0;
     border-radius: 10px;

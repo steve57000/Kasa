@@ -16,7 +16,6 @@ const Collapse = ({ title, content }) => {
   return (
     <div
       className="Collapse"
-      tabIndex="-1"
       style={{
         marginBottom: '3vh',
         maxWidth: '1000px',
@@ -28,6 +27,8 @@ const Collapse = ({ title, content }) => {
         tabIndex="0"
         onClick={getExpanded}
         onKeyDown={getExpanded}
+        aria-label={title}
+        aria-labelledby="titleAria"
       >
         <span className="CollapseTitle">{title}</span>
         <img
@@ -38,15 +39,24 @@ const Collapse = ({ title, content }) => {
               ? { transition: 'all .4s ', transform: 'rotate(-180deg)' }
               : { transition: 'all .4s' }
           }
-          alt={collapseALtName}
+          aria-label={collapseALtName}
+          alt=""
         />
       </div>
 
       {/* On génère l'élément dans le DOM seulement si le Collapse est déplié */}
       {!isExpanded ? null : (
-        <ul className="CollapseExpanded" style={{ backgroundColor: '#F6F6F6' }}>
+        <ul
+          className="CollapseExpanded"
+          id="titleAria"
+          style={{ backgroundColor: '#F6F6F6' }}
+        >
           {newContent.map((item, index) => (
-            <li key={`${item}-${index}`} style={{ listStyle: 'none' }}>
+            <li
+              aria-label={item}
+              key={`${item}-${index}`}
+              style={{ listStyle: 'none' }}
+            >
               {item}
             </li>
           ))}

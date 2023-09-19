@@ -27,23 +27,17 @@ const Gallery = ({ pictures }) => {
         (picture, index) =>
           index === current && (
             <div className="Picture" key={'gallery_' + index}>
-              <img
-                src={picture}
-                key={picture}
-                alt="Logement"
-                style={styleAnimation}
-              />
+              <img src={picture} key={picture} alt="" style={styleAnimation} />
             </div>
           ),
       )}
       {length > 1 && (
         <div className="Buttons">
           <button className="Prev" onClick={prev}>
-            <img src={leftArrow} alt="" />
+            <img src={leftArrow} alt="précédente" />
           </button>
-
           <button className="Next" onClick={next}>
-            <img src={leftArrow} alt="" />
+            <img src={leftArrow} alt="suivante" />
           </button>
         </div>
       )}
