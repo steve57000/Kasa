@@ -27,7 +27,7 @@ function RouterApp() {
   return (
     <Router basename="/kasa">
       <Routes>
-        <Route path="" element={<BasicLayout />}>
+        <Route path="/" element={<BasicLayout />}>
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="404notFound" element={<ErrorPage />} />

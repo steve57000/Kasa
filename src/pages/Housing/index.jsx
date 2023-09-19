@@ -6,10 +6,9 @@ import Rating from '../../components/Rating/Rating';
 import Tags from '../../components/Tags/Tags';
 import Loader from '../../components/Loader/Loader';
 import HousingService from '../../utils/hooks';
-import { config } from "../../Constantes";
+
 import './Housing.css';
 
-const urlRedirect: string = config.url;
 const Housing = () => {
   const { id } = useParams();
   const [data, setData] = useState([]);
@@ -39,7 +38,7 @@ const Housing = () => {
   }, [id]);
 
   if (errorCall) {
-    return <Navigate to={`${urlRedirect}/404notFound`} />;
+    return <Navigate to="404notFound " />;
   }
 
   if (error) {
@@ -64,9 +63,7 @@ const Housing = () => {
                 <span className="HostName">{data.host.name}</span>
                 <img src={data.host.picture} alt={data.host.name} />
               </div>
-              <Rating
-                rating={data.rating}
-              />
+              <Rating rating={data.rating} />
             </div>
           </div>
           <div className="HouseDescription">
