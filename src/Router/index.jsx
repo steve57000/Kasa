@@ -37,7 +37,10 @@ function RouterApp() {
             element={<Navigate to="404notFound" replace={true} />}
           />
         </Route>
-        <Route path="*" element={<ErrorPage />} />
+        <Route
+          path="*"
+          element={<Navigate to="404notFound" replace={true} />}
+        />
       </Routes>
     </Router>
   );
