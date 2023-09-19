@@ -1,7 +1,7 @@
 .ContainerHousing {
     width: 100%;
 }
-.Content {
+.Body .Content {
     display: flex;
     justify-content: space-between;
     margin: 24px 0;
@@ -9,7 +9,7 @@
 
 .Title h2 {
     font-size: 3vmin;
-    margin-top: 0;
+    margin: 0;
 }
 
 .Title h3 {
@@ -67,10 +67,6 @@
 .Arrow {
     width: 32px;
     height: 32px;
-}
-
-.Content {
-    transition: all .3s;
 }
 
 .CollapseExpanded {
