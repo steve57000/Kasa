@@ -7,6 +7,6 @@ defaults:
     values:
       image:
         path: /kasaSocialPreview.jpg
-        height: 630
-        width: 1200
+        height: 640
+        width: 1280
 google_analytics: UA-118642689-4
