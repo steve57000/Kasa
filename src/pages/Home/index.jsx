@@ -5,7 +5,6 @@ import HousingService from '../../utils/hooks/index';
 import BannerImg from '../../assets/media/banner.jpg';
 
 import Card from '../../components/Card/Card';
-import Banner from '../../components/Banner/Banner';
 import Loader from '../../components/Loader/Loader';
 
 import './HomePage.css';
@@ -35,10 +34,15 @@ function Home() {
   // affichage (render)
   return (
     <div className="Home">
-      <Banner
-        imgUrl={BannerImg}
-        title={['Chez vous, ', 'partout et ailleurs']}
-      ></Banner>
+      <div className="Banner" style={{ backgroundImage: `url(${BannerImg})` }}>
+        <span className="BannerEffect"></span>
+        <div className="Banner-title">
+          <h1>
+            Chez vous,
+            <span> partout et ailleurs</span>
+          </h1>
+        </div>
+      </div>
 
       <div className="SectionCard">
         {isLoading ? (

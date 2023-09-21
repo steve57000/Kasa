@@ -1,10 +1,10 @@
 import React from 'react';
 
-import Banner from '../../components/Banner/Banner';
+import BannerImgAbout from '../../assets/media/bannerAbout.jpg';
 import Collapse from '../../components/Collapse/Collapse';
 
-import BannerImg from '../../assets/media/bannerAbout.jpg';
 import './about.css'
+import '../../assets/style/Banner.css';
 
 const contentCollapse = [
   {
@@ -32,14 +32,16 @@ const contentCollapse = [
       "La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes.",
   },
 ];
-// const { titleAdd, descriptionAdd } = contentCollapse;
+
 function About() {
   return (
     <>
-        <Banner imgUrl={BannerImg}> </Banner>
-        <div className='CollapseAbout'
-        >
-            { contentCollapse.map((content : {id: string, description: string, title: string}) => (
+        <div className="Banner" style={{backgroundImage: `url(${BannerImgAbout})`}} >
+            <span className="BannerEffect"></span>
+        </div>
+
+        <div className='CollapseAbout'>
+            {contentCollapse.map((content : {id: string, description: string, title: string}) => (
                 <Collapse title={content.title} content={content.description} key={`${content.id}-${content.title}`} />
             ))
             }

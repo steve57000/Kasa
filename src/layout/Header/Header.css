@@ -18,13 +18,13 @@
 }
 
 .Header-nav a:first-child {
-    margin-right: calc(10px + 3vw);
+    margin-right: calc(5px + 2vw);
 }
 
 .Header-nav a {
     color: #FF6060;
     text-decoration: none;
-    font-size:calc(12px + 0.8vw);
+    font-size:calc(14px + 0.5vw);
     text-align: end;
 }
 
