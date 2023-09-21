@@ -8,12 +8,12 @@ const TagContent = styled.div`
   min-height: 18px;
   max-height: 25px;
   height: 100%;
-  font-size: 12px;
+  font-size: calc(10px + 0.2vw);
   background-color: ${colors.primary};
   color: ${colors.secondary};
-  border-radius: 10px;
+  border-radius: 15px;
   display: flex;
-  padding: 14px;
+  padding: 2vh;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;

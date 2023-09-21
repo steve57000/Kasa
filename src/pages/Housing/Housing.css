@@ -4,17 +4,18 @@
 .Body .Content {
     display: flex;
     justify-content: space-between;
-    margin: 24px 0;
+    margin: 30px 0;
 }
 
 .Title h2 {
-    font-size: 3vmin;
+    font-size: 4vmin;
     margin: 0;
 }
 
 .Title h3 {
-      font-size: 2vmin;
-      margin: 0 24px 24px 0 ;
+    font-size: 2vmin;
+    margin: 10px 24px 24px 0 ;
+    font-weight: 500;
 }
 
 .Infos {
@@ -26,13 +27,14 @@
 
 .Owner {
     display: flex;
-    align-items: flex-start;
     justify-content: flex-end;
 }
 .HostName {
     width: 50%;
-    font-size: 2.3vmin;
-    text-align: right;
+    display: flex;
+    align-items: center;
+    font-size: 2.1vmin;
+    text-align: end;
     padding-right: 15px;
     line-height: 157.6%;
 }
@@ -40,7 +42,6 @@
     float: right;
     border-radius: 50%;
     width: 8vmin;
-    height: 8vmin;
 }
 .HouseDescription {
     display: flex;
