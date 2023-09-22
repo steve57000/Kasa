@@ -78,7 +78,7 @@
     margin: 0;
     border-radius: 10px;
     transition: all .3s;
-    animation: myAnim .3s ease ;
+    animation: myAnim .3s ease;
     z-index: -100;
 }
 @keyframes myAnim {
@@ -88,15 +88,6 @@
 
     100% {
         transform: translateY(0px);
-    }
-}
-@keyframes myAnimReturn {
-    0% {
-        transform: translateY(0px);
-    }
-
-    100% {
-        transform: translateY(-100px);
     }
 }
 

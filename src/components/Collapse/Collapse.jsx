@@ -19,7 +19,6 @@ const Collapse = ({ title, content }) => {
       style={{
         marginBottom: '3vh',
         maxWidth: '1000px',
-        transition: 'all 3s',
       }}
     >
       <div
@@ -36,8 +35,8 @@ const Collapse = ({ title, content }) => {
           className={isExpanded ? 'Arrow Arrow-expanded' : 'Arrow'}
           style={
             isExpanded
-              ? { transition: 'all .4s ', transform: 'rotate(-180deg)' }
-              : { transition: 'all .4s' }
+              ? { transition: 'all .3s ', transform: 'rotate(-180deg)' }
+              : { transition: 'all .3s' }
           }
           aria-label={collapseALtName}
           alt=""

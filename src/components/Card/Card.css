@@ -67,13 +67,9 @@
 @media (max-width: 1000px){
     .SectionCard ul {
         grid-template-columns: 1fr 1fr;
-        grid-gap: 2vw 3vh;
+        grid-gap: 3vh 2vw;
     }
     .SectionCard ul li {
-        max-width: 340px;
-        max-height: 340px;
-        min-width: 280px;
-        min-height: 225px;
         width: 100%;
         height: 100%;
     }
@@ -81,13 +77,8 @@
 @media (max-width: 620px) {
     .SectionCard ul {
         grid-template-columns: 1fr;
-        grid-gap: 2vh
     }
     .SectionCard ul li {
-        max-width: 340px;
-        max-height: 340px;
-        min-width: 100%;
-        min-height: 255px;
         width: 100%;
         height: 100%;
     }
