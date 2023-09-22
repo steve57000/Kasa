@@ -33,10 +33,11 @@ const contentCollapse = [
   },
 ];
 
+const bannerUrl =`url(${BannerImgAbout})`
 function About() {
   return (
     <>
-        <div className="Banner" style={{backgroundImage: `url(${BannerImgAbout})`}} >
+        <div className="Banner" style={{backgroundImage: bannerUrl }} >
             <span className="BannerEffect"></span>
         </div>
 
